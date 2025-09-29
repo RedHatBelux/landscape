@@ -25,7 +25,7 @@ RUN landscape2 build \
   --output-dir    "$OUTPUT_DIR"
 
 # ---------- Stage 2: serve ----------
-FROM nginx:alpine
+FROM docker.io/library/nginx:alpine
 COPY --from=builder /tmp/site /usr/share/nginx/html
 # SPA-friendly routing
 RUN printf '%s\n' \
