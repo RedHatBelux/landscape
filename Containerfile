@@ -26,9 +26,11 @@ RUN landscape2 build \
 
 # ---------- Stage 2: serve ----------
 FROM registry.access.redhat.com/ubi9/nginx-120:latest
-COPY --from=builder /tmp/site /usr/share/nginx/html
-# SPA routing
-RUN printf '%s\n' \
- 'server { listen 8080; server_name _; root /usr/share/nginx/html; index index.html;' \
- '  location / { try_files $uri /index.html; } }' > /etc/nginx/conf.d/default.conf
+ # become root only to copy/clean content safely
+USER 0
+RUN rm -rf /opt/app-root/src/*
+COPY --from=builder /tmp/site /opt/app-root/src
+# drop back to the default non-root user
+USER 1001
+
 EXPOSE 8080
