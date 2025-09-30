@@ -25,10 +25,10 @@ RUN landscape2 build \
   --output-dir    "$OUTPUT_DIR"
 
 # ---------- Stage 2: serve ----------
-FROM docker.io/library/nginx:alpine
+FROM registry.access.redhat.com/ubi9/nginx-120:latest
 COPY --from=builder /tmp/site /usr/share/nginx/html
-# SPA-friendly routing
+# SPA routing
 RUN printf '%s\n' \
- 'server { listen 80; server_name _; root /usr/share/nginx/html; index index.html;' \
+ 'server { listen 8080; server_name _; root /usr/share/nginx/html; index index.html;' \
  '  location / { try_files $uri /index.html; } }' > /etc/nginx/conf.d/default.conf
-EXPOSE 80
+EXPOSE 8080
