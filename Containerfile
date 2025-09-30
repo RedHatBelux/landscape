@@ -25,12 +25,16 @@ RUN landscape2 build \
   --output-dir    "$OUTPUT_DIR"
 
 # ---------- Stage 2: serve ----------
-FROM registry.access.redhat.com/ubi9/nginx-120:latest
+FROM registry.access.redhat.com/ubi9/nginx-122:latest
  # become root only to copy/clean content safely
 USER 0
-RUN rm -rf /opt/app-root/src/*
+RUN rm -rf /opt/app-root/src/* /etc/nginx/conf.d/*.conf
 COPY --from=builder /tmp/site /opt/app-root/src
-# drop back to the default non-root user
+# Add SPA config on 8080
+RUN printf '%s\n' \
+'server { listen 8080; server_name _; root /opt/app-root/src; index index.html;' \
+'  location / { try_files $uri /index.html; } }' > /etc/nginx/conf.d/landscape.conf
 USER 1001
+EXPOSE 8080
 
 EXPOSE 8080
