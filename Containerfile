@@ -26,15 +26,34 @@ RUN landscape2 build \
 
 # ---------- Stage 2: serve ----------
 FROM registry.access.redhat.com/ubi9/nginx-122:latest
- # become root only to copy/clean content safely
+
+# become root to write config/content and fix perms
 USER 0
-RUN rm -rf /opt/app-root/src/* /etc/nginx/conf.d/*.conf
+RUN rm -rf /opt/app-root/src/* /etc/nginx/conf.d/*
+
+# copy built site
 COPY --from=builder /tmp/site /opt/app-root/src
-# Add SPA config on 8080
+
+# SPA config on 8080
 RUN printf '%s\n' \
-'server { listen 8080; server_name _; root /opt/app-root/src; index index.html;' \
-'  location / { try_files $uri /index.html; } }' > /etc/nginx/conf.d/landscape.conf
+'server {                               ' \
+'  listen 8080;                         ' \
+'  server_name _;                       ' \
+'  root /opt/app-root/src;              ' \
+'  index index.html;                    ' \
+'  location / { try_files $uri /index.html; }' \
+'}                                       ' \
+> /etc/nginx/conf.d/landscape.conf
+
+# OpenShift: allow arbitrary UID (gid 0) to write needed dirs
+RUN mkdir -p /var/cache/nginx /var/run \
+ && chgrp -R 0 /var/cache/nginx /var/run /etc/nginx /opt/app-root/src \
+ && chmod -R g+rwX /var/cache/nginx /var/run /etc/nginx /opt/app-root/src
+
+# drop privileges again
 USER 1001
+
+# IMPORTANT: override the S2I entrypoint to run nginx directly
+ENTRYPOINT ["/usr/sbin/nginx","-g","daemon off;"]
 EXPOSE 8080
 
-EXPOSE 8080
