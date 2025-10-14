@@ -34,6 +34,60 @@ RUN rm -rf /opt/app-root/src/* /etc/nginx/conf.d/*
 # copy built site
 COPY --from=builder /tmp/site /opt/app-root/src
 
+# Inject a small runtime script & hook it into index.html
+# 1) write /opt/app-root/src/custom.js
+RUN printf '%s\n' \
+'(() => {' \
+'  const RH_COLOR = "#ee0000";' \
+'  const RH_MAP = new Map([' \
+'    ["Argo","OpenShift GitOps"],' \
+'    ["Tekton Pipelines","OpenShift Pipelines"],' \
+'    ["Quay","Red Hat Quay"],' \
+'    ["Clair","Red Hat Quay (Clair)"],' \
+'    ["Ansible","Red Hat Ansible Automation Platform"],' \
+'    ["Quarkus","Red Hat build of Quarkus"],' \
+'    ["KubeVirt","OpenShift Virtualization"],' \
+'    ["Istio","OpenShift Service Mesh"],' \
+'    ["Knative","OpenShift Serverless"],' \
+'    ["Keycloak","Red Hat Single Sign-On"],' \
+'  ]);' \
+'' \
+'  function paint() {' \
+'    // Match tiles by their accessible label or title (Landscape2 sets those to the item name).' \
+'    const nodes = document.querySelectorAll("[title], [aria-label]");' \
+'    nodes.forEach(el => {' \
+'      const name = (el.getAttribute("aria-label") || el.getAttribute("title") || "").trim();' \
+'      if (!name || !RH_MAP.has(name)) return;' \
+'      // Colorize the surrounding clickable card container if present, otherwise the element itself' \
+'      const card = el.closest("a, button, div") || el;' \
+'      card.style.setProperty("--rh-bg", RH_COLOR);' \
+'      card.style.background = "var(--rh-bg)";' \
+'      card.style.color = "white";' \
+'      card.style.borderRadius = "8px";' \
+'      card.style.boxShadow = "0 0 0 2px rgba(0,0,0,.05)";' \
+'      // Tooltip: show product name on hover' \
+'      const product = RH_MAP.get(name);' \
+'      el.setAttribute("title", product);' \
+'      el.setAttribute("aria-label", `${name} — ${product}`);' \
+'      // Optional inline badge' \
+'      if (!card.querySelector(".rh-badge")) {' \
+'        const b = document.createElement("span");' \
+'        b.className = "rh-badge";' \
+'        b.textContent = "Red Hat";' \
+'        b.style.cssText = "margin-left:.5rem;padding:.1rem .35rem;border-radius:.35rem;background:rgba(255,255,255,.2);font-size:.75rem;";' \
+'        (card.querySelector("span, h3, h4") || card).appendChild(b);' \
+'      }' \
+'    });' \
+'  }' \
+'' \
+'  // Re-run after route changes/renders using a MutationObserver' \
+'  const mo = new MutationObserver(() => { requestAnimationFrame(paint); });' \
+'  mo.observe(document.documentElement, {childList:true, subtree:true});' \
+'  window.addEventListener("load", paint);' \
+'})();' \
+> /opt/app-root/src/custom.js \
+&& sed -i "s#</head>#  <script src=\"/custom.js\"></script>\n</head>#g" /opt/app-root/src/index.html
+
 # SPA config on 8080
 RUN printf '%s\n' \
 'server {                               ' \
