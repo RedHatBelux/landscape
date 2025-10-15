@@ -9,7 +9,8 @@ RUN mkdir -p /src/cncf && \
     curl -L -o /src/cncf/guide.yml    https://raw.githubusercontent.com/cncf/landscape2-sites/main/cncf/guide.yml
 
 # ---------- Stage 1: build the static site ----------
-FROM ghcr.io/cncf/landscape2:latest AS builder
+#FROM ghcr.io/cncf/landscape2:latest AS builder
+FROM quay.io/plewyllie/landscape2:builder as builder
 ENV OUTPUT_DIR=/tmp/site CACHE_DIR=/tmp/cache
 RUN mkdir -p "$OUTPUT_DIR" "$CACHE_DIR"
 COPY --from=fetch /src/landscape /workspace/landscape
