@@ -1,8 +1,11 @@
 # ---------- Stage 0: fetch sources (no secrets) ----------
-FROM alpine:3.20 AS fetch
-RUN apk add --no-cache git curl
+FROM registry.access.redhat.com/ubi9/ubi-minimal:latest AS fetch
+RUN microdnf -y --setopt=install_weak_deps=0 install git curl ca-certificates \
+ && microdnf clean all
+
 # Your fork (data + logos)
 RUN git clone --depth=1 https://github.com/RedHatBelux/landscape /src/landscape
+
 # Canonical CNCF settings/guide
 RUN mkdir -p /src/cncf && \
     curl -L -o /src/cncf/settings.yml https://raw.githubusercontent.com/cncf/landscape2-sites/main/cncf/settings.yml && \
