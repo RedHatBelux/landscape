@@ -1,6 +1,6 @@
 # ---------- Stage 0: fetch sources (no secrets) ----------
 FROM registry.access.redhat.com/ubi9/ubi-minimal:latest AS fetch
-RUN microdnf -y --setopt=install_weak_deps=0 install git curl ca-certificates \
+RUN microdnf -y --setopt=install_weak_deps=0 install git ca-certificates \
  && microdnf clean all
 
 # Your fork (data + logos)
