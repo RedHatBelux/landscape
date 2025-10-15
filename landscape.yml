@@ -6827,6 +6827,10 @@ landscape:
               summary_integrations: Kubernetes, GitHub, GitLab, Bitbucket, Azure DevOps, Jenkins, and more with plugins
               blog_url: https://backstage.io/blog
               slack_url: https://discord.gg/backstage-687207715902193673
+              redhat:
+                supported: true
+                product: Red Hat Developer Hub
+                color: '#ee0000'
           - item:
             name: Buildpacks
             homepage_url: https://buildpacks.io/
