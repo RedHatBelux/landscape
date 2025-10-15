@@ -40,10 +40,10 @@ landscape:
             twitter: https://twitter.com/ansible
             crunchbase: https://www.crunchbase.com/organization/red-hat
             extra:
-            redhat:
-              supported: true
-              product: Red Hat Ansible Automation Platform
-              color: '#ee0000'
+              redhat:
+                supported: true
+                product: Red Hat Ansible Automation Platform
+                color: '#ee0000'
           - item:
             name: Apollo
             description: Apollo is a reliable open-source configuration management system
@@ -891,6 +891,11 @@ landscape:
             logo: quay.svg
             twitter: https://twitter.com/projectquay
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Quay
+                color: '#ee0000'
           - item:
             name: Spegel
             description: >-
