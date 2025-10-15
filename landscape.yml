@@ -43,6 +43,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Ansible Automation Platform
+                description: test ansible description
                 color: '#ee0000'
           - item:
             name: Apollo
@@ -895,6 +896,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Quay
+                description: test quay description
                 color: '#ee0000'
           - item:
             name: Spegel
@@ -6830,6 +6832,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Developer Hub
+                description: Developer hub description
                 color: '#ee0000'
           - item:
             name: Buildpacks
