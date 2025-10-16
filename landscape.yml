@@ -1485,6 +1485,11 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#in-toto-logos
               slack_url: https://cloud-native.slack.com/messages/in-toto
               clomonitor_name: in-toto
+              redhat:
+                supported: true
+                product: Red Hat Trusted Application Pipeline
+                description: Red Hat Trusted Application Pipeline leverages in-toto attestations to secure software supply chains on OpenShift.
+                color: '#ee0000'
           - item:
             name: Keycloak
             description: >-
@@ -1839,6 +1844,11 @@ landscape:
                   type: security
                   url: https://cure53.de/pentest-report_opa.pdf
                   vendor: Cure53
+              redhat:
+                supported: true
+                product: Red Hat Advanced Cluster Management for Kubernetes
+                description: Red Hat ACM integrates and supports OPA/Gatekeeper for policy governance across managed OpenShift clusters.
+                color: '#ee0000'
           - item:
             name: Open Policy Containers
             description: A docker-inspired CLI for building, tagging, pushing, pulling, and signing OPA policies to and from OCI-compliant registries.
@@ -2318,6 +2328,11 @@ landscape:
               graduated: '2019-12-18'
               dev_stats_url: https://tuf.devstats.cncf.io/
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/incubating.md#tuf-logos
+              redhat:
+                supported: true
+                product: Red Hat Trusted Application Pipeline
+                description: Red Hat Trusted Application Pipeline incorporates TUF metadata to harden software distribution and signing workflows.
+                color: '#ee0000'
               stack_overflow_url: https://stackoverflow.com/questions/tagged/the-update-framework
               mailing_list_url: https://groups.google.com/forum/?fromgroups#!forum/theupdateframework
               clomonitor_name: tuf
@@ -2491,6 +2506,11 @@ landscape:
               slack_url: https://slack.spiffe.io/
               summary_personas: Platform Engineers,Security Engineers,Developers,Architects
               summary_tags: Security,Identity,Credentials,Certificate,Rotation,Standard,Attestation,Authentication
+              redhat:
+                supported: true
+                product: Zero Trust Workload Identity Operator (Tech Preview)
+                description: Red Hat enables SPIFFE-based workload identities on OpenShift via the Zero Trust Workload Identity Operator tech preview.
+                color: '#ee0000'
               summary_use_case: >
                 The Secure Production Identity Framework For Everyone (SPIFFE) Project defines a framework and set of standards for identifying and securing
                 communications between application services. At its core, SPIFFE is:
@@ -2583,6 +2603,11 @@ landscape:
                 workloads, independent of where those workloads are running. SPIRE provides secure attestation of both the workload itself and the environment
                 it is running within and uses that information against custom defined policy to determine the identity of the workload and issue the appropriate
                 credentials
+              redhat:
+                supported: true
+                product: Zero Trust Workload Identity Operator (Tech Preview)
+                description: Managed by the Red Hat Zero Trust Workload Identity Operator tech preview to automate SPIFFE/SPIRE identity issuance on OpenShift.
+                color: '#ee0000'
               summary_release_rate: Monthly
               summary_integration: SPIFFE, Kubernetes, Envoy, Istio, AWS, GCP, Azure, Vault, Cilium, CertManager
               summary_intro_url: https://www.youtube.com/watch?v=Q2SiGeebRKY
@@ -3758,6 +3783,11 @@ landscape:
               mailing_list_url: https://groups.google.com/forum/#!forum/cni-dev
               slack_url: https://containernetworking.slack.com
               specification: true
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Red Hat OpenShift implements the CNI specification across its networking stack and supports CNI-compatible plugins.
+                color: '#ee0000'
               clomonitor_name: cni
           - item:
             name: Cumulus
@@ -3866,6 +3896,12 @@ landscape:
             logo: multus.svg
             twitter: https://twitter.com/intelsoftware
             crunchbase: https://www.crunchbase.com/organization/intel
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Red Hat OpenShift supports Multus to provide multiple network attachments for advanced telco and edge networking scenarios.
+                color: '#ee0000'
           - item:
             name: Network Service Mesh
             homepage_url: https://networkservicemesh.io/
@@ -3895,6 +3931,12 @@ landscape:
             logo: open-v-switch.svg
             twitter: https://twitter.com/lf_networking
             crunchbase: https://www.crunchbase.com/organization/open-vswitch
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Open vSwitch underpins the Red Hat OpenShift OVN-Kubernetes data plane with enterprise support from Red Hat.
+                color: '#ee0000'
           - item:
             name: OVN-Kubernetes
             homepage_url: https://ovn-kubernetes.io/
@@ -6874,6 +6916,11 @@ landscape:
               summary_release_rate: Every 2-3 months
               summary_integration: Kafka, Kubernetes, Prometheus, Open Policy Agent, KEDA, Helm, Operator Framework, Jaeger, OpenTelemetry
               clomonitor_name: strimzi
+              redhat:
+                supported: true
+                product: Red Hat AMQ Streams
+                description: Red Hat AMQ Streams packages and supports Strimzi operators to run Apache Kafka on OpenShift clusters.
+                color: '#ee0000'
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
@@ -7003,6 +7050,11 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/blob/master/examples/sandbox.md#buildpacks-logos
               slack_url: https://slack.cncf.io/
               clomonitor_name: buildpacks
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Builds
+                description: Red Hat OpenShift Builds provides supported Cloud Native Buildpacks workflows via Shipwright and Tekton for container image creation.
+                color: '#ee0000'
           - item:
             name: Carvel
             description: >-
