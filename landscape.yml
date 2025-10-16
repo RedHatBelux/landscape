@@ -1559,6 +1559,11 @@ landscape:
               mailing_list_url: https://keylime.groups.io/g/main
               slack_url: https://cloud-native.slack.com/messages/keylime
               clomonitor_name: keylime
+              redhat:
+                supported: true
+                product: Red Hat Enterprise Linux
+                description: Included and supported in Red Hat Enterprise Linux.
+                color: '#ee0000'
           - item:
             name: KICS
             description: >-
@@ -2143,6 +2148,11 @@ landscape:
               artwork_url: https://github.com/ossf/artwork/blob/master/sigstore/stacked/color/Sigstore-logo_stacked-color.svg
               blog_url: https://blog.sigstore.dev/
               youtube_url: https://www.youtube.com/channel/UCWPVc8glVGOODxsA_ep0VVw
+              redhat:
+                supported: true
+                product: Red Hat Trusted Artifact Signer
+                description: Red Hat Trusted Artifact Signer provides a production-ready sigstore deployment.
+                color: '#ee0000'
           - item:
             name: SlimToolkit
             description: Inspect, Optimize and Debug Your Containers
@@ -2228,6 +2238,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/stackrox
             extra:
               slack_url: https://cloud-native.slack.com/archives/C01TDE3GK0E
+              redhat:
+                supported: true
+                product: Red Hat Advanced Cluster Security for Kubernetes
+                description: Red Hat ACS builds on the open source StackRox project to deliver supported Kubernetes security for OpenShift.
+                color: '#ee0000'
           - item:
             name: Syft
             description: "Syft is a CLI tool and library for generating a Software Bill of Materials from container images and filesystems"
