@@ -1162,8 +1162,8 @@ landscape:
             extra:
               redhat:
                 supported: true
-                product: Red Hat Quay
-                description: Clair powers the Red Hat Quay security scanner for container vulnerability management.
+                product: Red Hat Quay and Red Hat Advanced Cluster Security (RHACS)
+                description: Clair powers both RHACS the Red Hat Quay security scanner for container vulnerability management.
                 color: '#ee0000'
           - item:
             name: CloudMatos
@@ -1196,6 +1196,15 @@ landscape:
               annual_review_date: '2023-06-15'
               blog_url: https://confidentialcontainers.org/blog/
               youtube_url: https://www.youtube.com/@confidentialcontainers3845
+              redhat:
+                supported: true
+                product: OpenShift Confidential Containers Operator
+                description:  >-
+                  The OpenShift confidential containers solution is based on deploying 2 operators:
+                    OpenShift sandboxed containers operator—based on the Kata Containers open source project running pods inside virtual machines (VMs) for isolation workloads. This operator has been enhanced to also support the CNCF Confidential Containers (CoCo) open source project when deployed in environments that support TEE infrastructure such as Intel TDX and AMD SEV-SNP. For simplicity we refer to this operator in diagrams as “OpenShift confidential containers.”
+                    Confidential compute attestation operator—based on the Trustee project (also part of the CNCF CoCo open source project) providing remote attestation capability. It’s responsible for performing the attestation operations and delivering secrets after successful attestation. A key point for this operator is to be deployed in a trusted environment
+                    More information at https://www.redhat.com/en/blog/introducing-confidential-containers-bare-metal
+                color: '#ee0000'
           - item:
             name: ContainerSSH
             description: >-
