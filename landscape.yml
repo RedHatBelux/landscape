@@ -43,7 +43,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Ansible Automation Platform
-                description: test ansible description
+                description: Enterprise automation platform with full Red Hat support for Ansible and curated content collections.
                 color: '#ee0000'
           - item:
             name: Apollo
@@ -896,7 +896,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Quay
-                description: test quay description
+                description: Enterprise container registry with integrated security scanning and Quay platform support from Red Hat.
                 color: '#ee0000'
           - item:
             name: Spegel
@@ -1159,6 +1159,12 @@ landscape:
             logo: clair.svg
             twitter: https://twitter.com/coreos
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Quay
+                description: Clair powers the Red Hat Quay security scanner for container vulnerability management.
+                color: '#ee0000'
           - item:
             name: CloudMatos
             description: >-
@@ -1596,6 +1602,11 @@ landscape:
             crunchbase: https://www.crunchbase.com/organization/red-hat
             extra:
               slack_url: https://kube-linter.slack.com
+              redhat:
+                supported: true
+                product: Red Hat Advanced Cluster Security for Kubernetes
+                description: Integrates KubeLinter checks into the supported ACS policy engine for actionable misconfiguration insight.
+                color: '#ee0000'
           - item:
             name: Kubescape
             description: >-
@@ -1859,6 +1870,12 @@ landscape:
             logo: openscap.svg
             twitter: https://twitter.com/OpenSCAP
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Enterprise Linux
+                description: Red Hat Enterprise Linux ships and supports OpenSCAP tooling for automated security and compliance scanning.
+                color: '#ee0000'
           - item:
             name: OSCAL-COMPASS
             description: >-
@@ -2770,6 +2787,12 @@ landscape:
             logo: gluster.svg
             twitter: https://twitter.com/gluster
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Gluster Storage
+                description: Enterprise support for deploying and operating Gluster-based scale-out storage clusters.
+                color: '#ee0000'
           - item:
             name: Google Persistent Disk
             description: >-
@@ -3731,6 +3754,12 @@ landscape:
             logo: flannel.svg
             twitter: https://twitter.com/coreos
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Red Hat supports Flannel for customers operating compatible OpenShift and CoreOS-based networking overlays.
+                color: '#ee0000'
           - item:
             name: Guardicore Centra
             homepage_url: https://www.guardicore.com/cyber-security-platform
@@ -5147,6 +5176,12 @@ landscape:
             logo: 3-scale.svg
             twitter: https://twitter.com/3scale
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat 3scale API Management
+                description: Red Hat delivers enterprise API management built on upstream 3scale with SLA-backed support and tooling.
+                color: '#ee0000'
           - item:
             name: Akana
             homepage_url: https://www.akana.com/
@@ -5877,6 +5912,12 @@ landscape:
             logo: infinispan.svg
             twitter: https://twitter.com/infinispan
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Data Grid
+                description: Red Hat Data Grid builds on Infinispan to provide supported, enterprise-grade in-memory caching and data services.
+                color: '#ee0000'
           - item:
             name: InterSystems IRIS Data Platform
             homepage_url: https://www.intersystems.com/products/intersystems-iris/
@@ -6422,6 +6463,12 @@ landscape:
             logo: apicurio-registry.svg
             twitter: https://twitter.com/apicurio
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Service Registry
+                description: Part of Red Hat Application Foundations, offering a supported artifact registry powered by Apicurio.
+                color: '#ee0000'
           - item:
             name: ArkFlow
             description: >-
@@ -6832,7 +6879,7 @@ landscape:
               redhat:
                 supported: true
                 product: Red Hat Developer Hub
-                description: Developer hub description
+                description: Red Hat’s supported developer portal built on Backstage with opinionated plugins and lifecycle tooling.
                 color: '#ee0000'
           - item:
             name: Buildpacks
@@ -7038,6 +7085,12 @@ landscape:
             logo: fabric8-kubernetes-client.svg
             twitter: https://twitter.com/fabric8io
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Application Runtimes
+                description: Ships the Fabric8 Kubernetes Client with full Red Hat support for Java operators and OpenShift integrations.
+                color: '#ee0000'
           - item:
             name: Gefyra
             description: >-
@@ -7522,6 +7575,11 @@ landscape:
             extra:
               stack_overflow_url: https://stackoverflow.com/questions/tagged/quarkus
               blog_url: https://quarkus.io/blog/
+              redhat:
+                supported: true
+                product: Red Hat build of Quarkus
+                description: Enterprise distribution of Quarkus with support, runtimes, and productized extensions from Red Hat.
+                color: '#ee0000'
               youtube_url: https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg
           - item:
             name: Radius
@@ -8311,6 +8369,11 @@ landscape:
               artwork_url: https://github.com/cncf/artwork/tree/main/projects/kube-burner
               slack_url: https://kubernetes.slack.com/messages/kube-burner
               clomonitor_name: kube-burner
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Maintained by Red Hat to validate OpenShift performance, scalability, and chaos-readiness.
+                color: '#ee0000'
           - item:
             name: Omnistrate (member)
             homepage_url: https://omnistrate.ai
@@ -8737,6 +8800,12 @@ landscape:
             repo_url: https://github.com/openshift/microshift
             logo: red-hat-member.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Device Edge
+                description: Delivered as part of Red Hat Device Edge with support for MicroShift-based edge cluster deployments.
+                color: '#ee0000'
           - item:
             name: Red Hat OpenShift
             description: OpenShift® helps organizations focus on building and scaling their business with fully supported enterprise Kubernetes by Red Hat®.
@@ -8745,6 +8814,12 @@ landscape:
             logo: red-hat-open-shift.svg
             twitter: https://twitter.com/openshift
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Platform Plus
+                description: Comprehensive Kubernetes platform from Red Hat with integrated security, automation, and lifecycle management.
+                color: '#ee0000'
           - item:
             name: RKE Government
             description: A Kubernetes distribution focused on enabling Federal government compliance-based use cases.
@@ -9167,6 +9242,12 @@ landscape:
             logo: Logo-Red_Hat-OpenShift_Dedicated-A-Standard-RGB.svg
             twitter: https://twitter.com/openshift
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Dedicated
+                description: Fully managed OpenShift service operated by Red Hat SREs with 24x7 support and lifecycle coverage.
+                color: '#ee0000'
           - item:
             name: Red Hat OpenShift on IBM Cloud
             description: >-
@@ -10259,6 +10340,11 @@ landscape:
               slack_url: https://kubernetes.slack.com/messages/C05SFMHRWK1
               accepted: '2023-12-19'
               clomonitor_name: krkn
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Used by Red Hat OpenShift SRE and performance teams to harden clusters through chaos validation.
+                color: '#ee0000'
       - subcategory:
         name: Continuous Optimization
         items:
@@ -11003,6 +11089,12 @@ landscape:
             logo: kiali.svg
             twitter: https://twitter.com/kialiproject
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Service Mesh
+                description: Observable service mesh console delivered and supported by Red Hat as part of OpenShift Service Mesh.
+                color: '#ee0000'
           - item:
             name: Kloudfuse (member)
             homepage_url: https://www.kloudfuse.com/
@@ -19166,6 +19258,12 @@ landscape:
             repo_url: https://github.com/containers/crun
             logo: wasm.svg
             crunchbase: https://www.crunchbase.com/organization/red-hat
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Enterprise Linux
+                description: Red Hat Enterprise Linux includes and supports crun as a high-performance OCI runtime for containers.
+                color: '#ee0000'
           - item:
             name: Docker (Wasm)
             homepage_url: https://www.docker.com
