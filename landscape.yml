@@ -7234,6 +7234,12 @@ landscape:
             repo_url: https://github.com/eclipse-che/che
             logo: eclipseche.svg
             crunchbase: https://www.crunchbase.com/organization/eclipse-che
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Dev Spaces
+                description: Delivered as the Red Hat OpenShift Dev Spaces operator for managed cloud IDE workspaces on OpenShift.
+                color: '#ee0000'
           - item:
             name: Fabric8 Kubernetes Client
             description: >-
