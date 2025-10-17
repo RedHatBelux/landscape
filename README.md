@@ -1,58 +1,97 @@
-# Cloud Native Landscape
+# Red Hat CNCF Landscape
 
-![Cloud Native Landscape Logo](https://raw.githubusercontent.com/cncf/artwork/master/other/cncf-landscape/horizontal/color/cncf-landscape-horizontal-color.png)
+This repository curates a CNCF landscape view that spotlights the open source projects and products where Red Hat invests, contributes, or builds commercial offerings.  
+The data in `landscape.yml` is rendered with [landscape2](https://github.com/cncf/landscape2) to produce a browsable static site that mirrors the public CNCF landscape while adding Red Hat–specific context (for example, differentiating simple community contributions from fully supported products and exposing CNAI groupings).
 
-The [CNCF](https://www.cncf.io) Cloud Native [Landscape](https://landscape.cncf.io) is intended as a map through the previously uncharted terrain of cloud native technologies. This attempts to categorize most of the projects and product offerings in the cloud native space. There are many routes to deploying a cloud native application, with CNCF Projects representing a particularly well-traveled path.
+The repository is intended to be kept close to the upstream CNCF dataset while layering Red Hat metadata on top so that new upstream releases can be merged with minimal friction.
 
-This repository contains the data files and images required to generate the [CNCF landscape](https://landscape.cncf.io). The software that generates it can be found at the [cncf/landscape2](https://github.com/cncf/landscape2) repository. Please see its [README file](https://github.com/cncf/landscape2#landscape2) for more information about how it works.
+---
 
-## New entries
+## Repository layout
 
-To add a new entry to the landscape, please open a pull request to add it in alphabetical order to the [landscape.yml](landscape.yml) file. The logo must be added to the `hosted_logos` directory (in SVG format) and referenced from the `logo` field.
+| Path | Purpose |
+|------|---------|
+| `landscape.yml` | Source of truth for categories, items, and Red Hat metadata (color codes, product descriptions, CNAI tags, etc.). |
+| `hosted_logos/` | SVG assets referenced from `landscape.yml`. Store only the logo variants actually used on the landscape. |
+| `Containerfile` | Multi-stage build that fetches the CNCF rendering configuration, runs `landscape2 build`, and packages the static site behind nginx for local testing or containerized deployment. |
+| `docs/` | Supporting documentation (for example, summary field reference) that clarifies how additional metadata is mapped into the site. |
 
-Before submitting a new entry it is important to review the following guidelines:
+---
 
-* [Cloud native](https://github.com/cncf/toc/blob/main/DEFINITION.md) projects with at least 300 GitHub stars that clearly fit in an existing category are generally included. Put the project in the single category where it best fits.
-* We generally will only list a company's product in one box, to represent its major or best-known offering. We occasionally make exceptions for large companies. Note that if we allowed listing the same product or project in multiple boxes, the over +1k logos on the landscape would multiply to many times that many.
-* We are unlikely to create a new category for products/projects as we'd rather find the best home with the current options.
-* We are generally not including commercial versions of open source software. The exception is that we are showing all Certified Kubernetes implementations.
-* Closed source products need to link to a clear description of your product; no stealth mode companies.
-* Crunchbase organization should be the company or organization that controls the software. That is normally the owner of the trademark, whether or not a trademark has been formally filed.
-* Your project or company needs a logo in SVG format:
-  * Logos must include the company, product or project name in English. It's fine to also include words from another language.
-  * Don't use reversed logos (i.e. with a non-white, non-transparent background color).
-  * When multiple variants exist, use stacked (not horizontal) logos.
+## Editing guidance
 
-> [!NOTE]
-> At the moment the landscape is generated daily, so once your PR is merged your changes should be visible before 24 hours.
+1. **Keep upstream structure**  
+   - Insert new items alphabetically within their category/subcategory to reduce merge conflicts with CNCF.
+   - Preserve all mandatory fields required by the schema noted at the top of `landscape.yml`.
 
-## Extra fields
+2. **Annotate Red Hat involvement**  
+   - Use the `extra.redhat` stanza to describe what Red Hat offers (supported product, operator, integration, etc.).  
+   - Apply `color: '#fa2200'` for fully supported Red Hat products; keep `color: '#ee0000'` when we are contributing but not shipping a productized offering.
+   - Update the description to explain whether the relationship is a contribution, foundation technology, or customer-facing product.
 
-The `extra` section in the landscape.yml file allows you to include various fields to provide essential details about your project. This section helps users understand the project's purpose and find more information. For a detailed list of possible fields please refer to the [Extra Fields Documentation](https://github.com/cncf/landscape2/blob/main/docs/config/data.yml).
+3. **Capture CNAI placement**  
+   - Items that should appear in the Cloud Native AI (CNAI) overlays must list the appropriate `second_path` entry such as `"CNAI / ML Serving"` or `"CNAI / Data Architecture"`.
 
-## Technical Advisory Groups (TAG)
+4. **Logos and assets**  
+   - Add only SVG logos that meet CNCF landscape guidelines (transparent background, English wordmark).  
+   - Name files using lowercase hyphenated identifiers, and point items to `hosted_logos/<logo>.svg`.
 
-Projects can specify which TAG owns them in the `landscape.yml` file. This can be achieved by setting the `tag` field in the `extra` item's section to one of the following values:
+5. **Validate YAML**  
+   - Ensure indentation is two spaces per level.  
+   - Use block scalars (`|` or `>-`) for multi-line text.  
+   - Run `yamllint` or another validator if available before submitting changes.
 
-* `app-delivery`
-* `contributor-strategy`
-* `environmental-sustainability`
-* `network`
-* `observability`
-* `runtime`
-* `security`
-* `storage`
+---
 
-When this information is not provided, we'll try to detect it automatically based on the [TAGs configuration section of the settings file](https://github.com/cncf/landscape2-sites/blob/4f24e07b22ab4cc05b8211c9ce5184797e931631/cncf/settings.yml#L277-L359). The automatic detection is based on a [pre-defined mapping between categories/subcategories and TAGs](https://github.com/cncf/landscape2-sites/blob/4f24e07b22ab4cc05b8211c9ce5184797e931631/cncf/settings.yml#L277-L359), so it may not be accurate in some cases. In those cases, the recommended approach is to provide the TAG manually as explained above.
+## Building and previewing the site
 
-If you find an item with an incorrect TAG, we'd really appreciate if you could open a pull request to provide the correct one.
+The provided `Containerfile` builds the static site without requiring direct network access during the render stage. You only need [Podman](https://podman.io) or Docker installed locally.
 
-## Corrections
+```bash
+# Build the container image
+podman build -t redhat-cncf-landscape .
 
-If you find an error in the landscape, please open a pull request with the suggested changes to the [landscape.yml](landscape.yml) file. Some information displayed in the landscape is obtained from Crunchbase or GitHub, so errors on it should be fixed in the corresponding source.
+# Run the generated site on http://localhost:8080
+podman run --rm -p 8080:8080 redhat-cncf-landscape
+```
 
-## License
+The multi-stage build performs the following:
 
-The generated landscape contains data received from [Crunchbase](http://www.crunchbase.com). This data is not licensed pursuant to the Apache License. It is subject to Crunchbase’s Data Access Terms, available at [https://data.crunchbase.com/docs/terms](https://data.crunchbase.com/docs/terms), and is only permitted to be used with Linux Foundation landscape projects.
+1. Fetches this repository plus the canonical CNCF `settings.yml` and `guide.yml`.
+2. Runs `landscape2 build` with the local `landscape.yml` and `hosted_logos`.
+3. Serves the resulting static assets through nginx configured for single-page app routing.
 
-Everything else is under the Apache License, Version 2.0, except for projects and products logos, which are generally copyrighted by the company that created them, and are simply cached here for reliability. The generated landscape and the [landscape.yml](landscape.yml) file are alternatively available under the [Creative Commons Attribution 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+You can substitute `docker` for `podman` if preferred.
+
+---
+
+## Keeping data in sync with the CSV
+
+The CSV is a convenience list for tracking Red Hat participation levels. A lightweight workflow looks like this:
+
+1. Add or update rows in the CSV when Red Hat joins, graduates, or productizes a CNCF project.  
+2. Reconcile the CSV into `landscape.yml`, aligning names and descriptions and updating `extra.redhat` blocks and color values accordingly.  
+3. Remove any discrepancies (for example, projects with `"CNCF" != "Yes"` should not appear in the landscape).  
+4. Commit both files together so readers can see the provenance of the updates.
+
+Scripts can be written to sanity-check the CSV against `landscape.yml`, but no automation is committed here to keep the repo portable.
+
+---
+
+## Contribution process
+
+1. Create a feature branch.
+2. Update `landscape.yml` (and `hosted_logos/` if required) following the editing rules above.
+3. Preview the site locally via `podman run` to ensure the new entries render correctly and the CNAI overlays still appear as expected.
+4. Submit a pull request summarizing the change (new project, color adjustment, CNAI addition, etc.).  
+   - Call out any intentional divergences from upstream CNCF data.  
+   - Include validation notes (for example, “previewed locally on Podman” or “yamllint clean”).
+
+---
+
+## Related resources
+
+- [CNCF landscape schema](https://raw.githubusercontent.com/cncf/landscape2/refs/heads/main/docs/config/schema/data.schema.json) — the JSON schema consumed by `landscape.yml`.
+- [CNCF landscape2 project](https://github.com/cncf/landscape2) — renderer used by this repo’s Containerfile.
+
+This README should evolve alongside the process. If you discover steps that are missing or tooling that improves validation, please open a PR to document it here.***
