@@ -535,7 +535,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat OpenShift Bare Metal IPI relies on Metal³ operators to provision and manage bare metal hosts as part of cluster lifecycle automation.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Mist.io
             homepage_url: https://mist.io/
@@ -1090,7 +1090,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift BPF Manager
                 description: Red Hat provides a supported Bpfman operator to manage and lifecycle eBPF programs across OpenShift clusters.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Capsule8
             homepage_url: https://capsule8.com/
@@ -1149,7 +1149,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat provides a supported cert-manager operator for automated certificate management on OpenShift.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Chaitin Tech
             homepage_url: https://www.chaitin.cn/en/
@@ -1191,7 +1191,7 @@ landscape:
                 supported: true
                 product: Red Hat Quay; Red Hat Advanced Cluster Security for Kubernetes
                 description: Clair powers the Red Hat Quay registry scanner and RHACS Scanner V4 (built on Claircore) for container image vulnerability management.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: CloudMatos
             description: >-
@@ -1231,7 +1231,7 @@ landscape:
                     OpenShift sandboxed containers operator—based on the Kata Containers open source project running pods inside virtual machines (VMs) for isolation workloads. This operator has been enhanced to also support the CNCF Confidential Containers (CoCo) open source project when deployed in environments that support TEE infrastructure such as Intel TDX and AMD SEV-SNP. For simplicity we refer to this operator in diagrams as “OpenShift confidential containers.”
                     Confidential compute attestation operator—based on the Trustee project (also part of the CNCF CoCo open source project) providing remote attestation capability. It’s responsible for performing the attestation operations and delivering secrets after successful attestation. A key point for this operator is to be deployed in a trusted environment
                     More information at https://www.redhat.com/en/blog/introducing-confidential-containers-bare-metal
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: ContainerSSH
             description: >-
@@ -1361,7 +1361,7 @@ landscape:
                 supported: true
                 product: Red Hat External Secrets Operator
                 description: Red Hat packages and supports External Secrets Operator to bridge OpenShift clusters with enterprise secret managers.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Fairwinds Insights
             homepage_url: https://fairwinds.com/insights
@@ -1565,7 +1565,7 @@ landscape:
                 supported: true
                 product: Red Hat build of Keycloak
                 description: Red Hat build of Keycloak provides supported enterprise SSO based on Keycloak for OpenShift and hybrid cloud workloads.
-                color: '#0088ff'
+                color: '#ee0000'
               clomonitor_name: keycloak
           - item:
             name: Keylime
@@ -1590,7 +1590,7 @@ landscape:
                 supported: true
                 product: Red Hat Enterprise Linux
                 description: Included and supported in Red Hat Enterprise Linux.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KICS
             description: >-
@@ -3215,7 +3215,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Data Foundation
                 description: Red Hat OpenShift Data Foundation builds on Rook to deliver supported, integrated storage services for OpenShift clusters.
-                color: '#fa2200'
+                color: '#ee0000'
               summary_personas: SRE/ DevOps Engineers
               summary_tags: Storage, Persistence, Data, CSI, Operator, Kubernetes
               summary_use_case: |2-
@@ -3420,7 +3420,7 @@ landscape:
                 supported: true
                 product: Red Hat Enterprise Linux
                 description: Red Hat bootable container images rely on ComposeFS to deliver read-only layers and transactional updates across RHEL footprints.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: bootc
             description: >-
@@ -3437,7 +3437,7 @@ landscape:
                 supported: true
                 product: Red Hat Enterprise Linux (bootc)
                 description: Red Hat delivers bootc to build and update RHEL-based hosts with atomic container images as part of its edge platform.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: CRI-O
             homepage_url: https://cri-o.io/
@@ -3480,7 +3480,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: CRI-O is the container runtime supported by Red Hat OpenShift for running Kubernetes workloads securely at scale.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Hyperlight
             description: A lightweight, secure container runtime solution designed for modern cloud-native workloads
@@ -3601,7 +3601,7 @@ landscape:
                 supported: true
                 product: Red Hat Enterprise Linux
                 description: Red Hat maintains the Podman, Buildah, and Skopeo toolchain as part of the supported container tools in Red Hat Enterprise Linux.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: lxd
             homepage_url: https://linuxcontainers.org/lxd/
@@ -3863,7 +3863,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat OpenShift implements the CNI specification across its networking stack and supports CNI-compatible plugins.
-                color: '#fa2200'
+                color: '#ee0000'
               clomonitor_name: cni
           - item:
             name: Cumulus
@@ -4042,7 +4042,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat OpenShift uses OVN-Kubernetes as the default SDN, with Red Hat engineering providing support and enhancements.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Project Calico
             homepage_url: https://www.tigera.io/project-calico
@@ -4083,7 +4083,7 @@ landscape:
                 supported: true
                 product: Red Hat Advanced Cluster Management for Kubernetes
                 description: Submariner powers Red Hat Advanced Cluster Management multi-cluster networking with full Red Hat support.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: OpenSDN
             homepage_url: https://opensdn.io
@@ -4494,7 +4494,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Serverless
                 description: Provides the foundation for Red Hat OpenShift Serverless with supported Knative Serving and Eventing components.
-                color: '#fa2200'
+                color: '#ee0000'
               summary_personas: Cloud Architects, Cloud Developers, Platform Engineers, DevOps Engineers, DevOps Practitioners
               summary_tags: Serverless, CloudEvents, Functions, Scaling, Applications
               summary_use_case: >-
@@ -4588,7 +4588,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift AI
                 description: Red Hat OpenShift AI includes supported Kubeflow components for building and deploying ML workflows on OpenShift.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KubeFleet
             description: A multi-cluster solution that enables users to effectively manage their applications running in multiple Kubernetes clusters.
@@ -4645,7 +4645,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Container Platform
                 description: Red Hat OpenShift Container Platform delivers a fully supported Kubernetes distribution with enterprise tooling and lifecycle management.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KubeSlice
             homepage_url: https://kubeslice.io
@@ -4741,7 +4741,7 @@ landscape:
                 supported: true
                 product: Red Hat Advanced Cluster Management for Kubernetes
                 description: Red Hat Advanced Cluster Management builds on Open Cluster Management to secure, govern, and operate fleets of OpenShift clusters.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: OpenFunction
             homepage_url: https://openfunction.dev
@@ -4953,7 +4953,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat OpenShift relies on a supported etcd control plane with Red Hat handling upgrades, tuning, and operations.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: k8gb
             homepage_url: https://www.k8gb.io
@@ -5233,7 +5233,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Service Mesh
                 description: Envoy functions as the supported data plane proxy within Red Hat OpenShift Service Mesh and Connectivity Link.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: F5
             homepage_url: https://www.f5.com/
@@ -5285,7 +5285,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat OpenShift on bare metal supports MetalLB for integrated load-balancing of cluster services.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -5555,7 +5555,7 @@ landscape:
                 supported: true
                 product: Red Hat Connectivity Link
                 description: Red Hat Connectivity Link provides supported Kuadrant controllers to secure and scale north-south traffic across clusters.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KubeGateway
             homepage_url: https://github.com/kubewharf/kubegateway
@@ -7006,7 +7006,7 @@ landscape:
                 supported: true
                 product: Red Hat AMQ Streams
                 description: Red Hat AMQ Streams packages and supports Strimzi operators to run Apache Kafka on OpenShift clusters.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Talend Data Streams
             homepage_url: https://www.talend.com/resources/what-streaming-data
@@ -7417,7 +7417,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Red Hat supports Helm chart lifecycle and packaging within OpenShift via the Helm CLI and Operator.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: itopia
             description: >-
@@ -7501,7 +7501,7 @@ landscape:
                 supported: true
                 product: Red Hat Migration Toolkit for Applications
                 description: Red Hat packages and supports Konveyor tooling through the Migration Toolkit for Applications to modernize workloads onto OpenShift.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KOTS
             description: >-
@@ -7594,7 +7594,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Virtualization
                 description: Delivered as Red Hat OpenShift Virtualization with full support for running and managing VMs alongside containers.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: KubeVPN
             description: >-
@@ -7781,7 +7781,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: The Operator Framework underpins Red Hat OpenShift’s supported operator ecosystem and tooling.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Packer
             homepage_url: https://www.packer.io/
@@ -7800,7 +7800,7 @@ landscape:
                 supported: true
                 product: Red Hat Enterprise Linux
                 description: Red Hat Enterprise Linux includes and supports Podman for rootless container builds and runtime management.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Podman Desktop
             description: >-
@@ -7829,7 +7829,7 @@ landscape:
                 supported: true
                 product: Red Hat Podman Desktop
                 description: Red Hat ships a supported Podman Desktop build with enterprise integrations and lifecycle support for developer workstations.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Porter
             homepage_url: https://porter.sh/
@@ -7957,7 +7957,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Builds
                 description: Red Hat OpenShift Builds embeds Shipwright controllers to extend build strategies with enterprise support.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Skaffold
             homepage_url: https://skaffold.dev/
@@ -8149,7 +8149,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift GitOps
                 description: Red Hat OpenShift GitOps provides supported Argo CD for managing cluster configuration and application delivery.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: AWS CodePipeline
             description: >-
@@ -8600,7 +8600,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Pipelines
                 description: Red Hat OpenShift Pipelines delivers a supported Tekton distribution for cloud-native CI/CD on OpenShift.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Terramate
             description: >-
@@ -8676,7 +8676,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Maintained by Red Hat to validate OpenShift performance, scalability, and chaos-readiness.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Omnistrate (member)
             homepage_url: https://omnistrate.ai
@@ -10647,7 +10647,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift
                 description: Used by Red Hat OpenShift SRE and performance teams to harden clusters through chaos validation.
-                color: '#fa2200'
+                color: '#ee0000'
       - subcategory:
         name: Continuous Optimization
         items:
@@ -11411,7 +11411,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Kepler Operator (Tech Preview)
                 description: Red Hat provides a Kepler operator for OpenShift to surface energy metrics as a technology preview.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Kiali
             homepage_url: https://www.kiali.io/
@@ -11825,7 +11825,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Observability
                 description: Red Hat OpenShift Observability delivers supported Perses dashboards for Prometheus and Thanos metrics across managed clusters.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Pinpoint
             homepage_url: https://pinpoint-apm.github.io/pinpoint/
@@ -11898,7 +11898,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Monitoring
                 description: Red Hat OpenShift Monitoring delivers a supported Prometheus stack for platform and workload observability.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Replex
             description: >-
@@ -12063,7 +12063,7 @@ landscape:
                 supported: true
                 product: Red Hat OpenShift Monitoring
                 description: Red Hat OpenShift Monitoring relies on Thanos for multi-cluster metrics storage and querying.
-                color: '#fa2200'
+                color: '#ee0000'
           - item:
             name: Tingyun
             homepage_url: https://www.tingyun.com/tingyun-app
