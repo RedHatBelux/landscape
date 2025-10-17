@@ -531,6 +531,11 @@ landscape:
               slack_url: https://kubernetes.slack.com/messages/CHD49TLE7
               youtube_url: https://www.youtube.com/channel/UC_xneeYbo-Dl4g-U78xW15g/videos
               clomonitor_name: metal3-io
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Red Hat OpenShift Bare Metal IPI relies on Metal³ operators to provision and manage bare metal hosts as part of cluster lifecycle automation.
+                color: '#ee0000'
           - item:
             name: Mist.io
             homepage_url: https://mist.io/
@@ -11110,7 +11115,7 @@ landscape:
                   url: https://github.com/fluent/fluent-bit/blob/master/doc-reports/cncf-fuzzing-audit.pdf
                   vendor: Ada Logics
               redhat:
-                supported: false
+                supported: true
                 product: Red Hat OpenShift Logging
                 description: Fluentd remains available but is deprecated in Red Hat OpenShift Logging in favor of Vector.
                 color: '#ee0000'
