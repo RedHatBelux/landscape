@@ -178,6 +178,12 @@ landscape:
             repo_url: https://github.com/theforeman/foreman
             logo: foreman.svg
             crunchbase: https://www.crunchbase.com/organization/foreman
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Satellite
+                description: Red Hat Satellite builds on Foreman to provide lifecycle management for RHEL fleets.
+                color: '#ee0000'
           - item:
             name: Goose
             homepage_url: https://block.github.io/goose/
@@ -556,6 +562,12 @@ landscape:
             url_for_bestpractices: https://github.com/openstack
             logo: open-stack.svg
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenStack Platform
+                description: Red Hat OpenStack Platform delivers a supported, enterprise distribution of OpenStack services.
+                color: '#ee0000'
           - item:
             name: OpenTofu
             description: >-
@@ -2261,6 +2273,11 @@ landscape:
               summary_intro_url: https://www.youtube.com/watch?v=9oj3BC3vOtc
               blog_url: https://anchore.com/blog/
               youtube_url: https://www.youtube.com/@anchore
+              redhat:
+                supported: true
+                product: Red Hat Trusted Profile Analyzer
+                description: Red Hat Trusted Profile Analyzer uses Syft to generate SBOMs for RHEL and OpenShift supply chain assessments.
+                color: '#ee0000'
           - item:
             name: Sysdig Secure
             description: "Sysdig Secure embeds security and compliance into the build, run and respond stages of the Kubernetes lifecycle.\_"
@@ -3257,6 +3274,12 @@ landscape:
             repo_url: https://github.com/openstack/swift
             logo: openstack-swift.svg
             crunchbase: https://www.crunchbase.com/organization/open-infrastructure-foundation
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenStack Platform
+                description: Included in Red Hat OpenStack Platform for enterprise object storage services.
+                color: '#ee0000'
           - item:
             name: Trilio
             homepage_url: https://www.trilio.io/
@@ -3275,6 +3298,12 @@ landscape:
             logo: project-velero.svg
             twitter: https://twitter.com/projectvelero
             crunchbase: https://www.crunchbase.com/organization/vmware
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift API for Data Protection
+                description: Red Hat OpenShift API for Data Protection packages and supports Velero for cluster backup and restore.
+                color: '#ee0000'
           - item:
             name: Vineyard
             description: Vineyard (v6d) is an in-memory immutable data manager.
@@ -3575,6 +3604,12 @@ landscape:
             twitter: https://twitter.com/OCI_ORG
             crunchbase: https://www.crunchbase.com/organization/open-container-initiative
             allow_duplicate_repo: true
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Enterprise Linux
+                description: Red Hat Enterprise Linux ships and supports runc as a core OCI runtime for OpenShift and container workloads.
+                color: '#ee0000'
           - item:
             name: Singularity
             homepage_url: https://sylabs.io/
@@ -5215,6 +5250,11 @@ landscape:
               chat_channel: '#metallb'
               dev_stats_url: https://metallb.devstats.cncf.io/
               clomonitor_name: metallb
+              redhat:
+                supported: true
+                product: Red Hat OpenShift
+                description: Red Hat OpenShift on bare metal supports MetalLB for integrated load-balancing of cluster services.
+                color: '#ee0000'
           - item:
             name: MOSN
             homepage_url: https://mosn.io
@@ -11137,6 +11177,12 @@ landscape:
             repo_url: https://github.com/grafana/tempo
             logo: grafana-tempo.svg
             crunchbase: https://www.crunchbase.com/organization/raintank
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift distributed tracing data collection
+                description: Red Hat’s distributed tracing stack includes Tempo for storing and querying traces across OpenShift clusters.
+                color: '#ee0000'
           - item:
             name: Graphite
             homepage_url: https://graphiteapp.org/
@@ -11305,6 +11351,11 @@ landscape:
               summary_use_case: Enabling workload power monitoring for cloud-native systems.
               summary_integrations: Kubernetes, Prometheus.
               clomonitor_name: kepler
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Kepler Operator (Tech Preview)
+                description: Red Hat provides a Kepler operator for OpenShift to surface energy metrics as a technology preview.
+                color: '#ee0000'
           - item:
             name: Kiali
             homepage_url: https://www.kiali.io/
@@ -11650,6 +11701,11 @@ landscape:
               summary_integrations: Prometheus, Jaeger, [and many more.](https://opentelemetry.io/ecosystem/)
               summary_intro_url: https://opentelemetry.io/ecosystem/demo/
               clomonitor_name: open-telemetry
+              redhat:
+                supported: true
+                product: Red Hat OpenShift distributed tracing data collection
+                description: Red Hat’s distributed tracing services use supported OpenTelemetry collectors and SDKs for unified observability on OpenShift.
+                color: '#ee0000'
           - item:
             name: OpenTracing
             homepage_url: https://opentracing.io/
@@ -11942,6 +11998,11 @@ landscape:
               summary_integrations: >-
                 See [Prometheus](https://prometheus.io/), [exporters](https://prometheus.io/docs/instrumenting/exporters/), [clientlibs](https://prometheus.io/docs/instrumenting/clientlibs/) and https://thanos.io/tip/thanos/integrations.md/
               clomonitor_name: thanos
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Monitoring
+                description: Red Hat OpenShift Monitoring relies on Thanos for multi-cluster metrics storage and querying.
+                color: '#ee0000'
           - item:
             name: Tingyun
             homepage_url: https://www.tingyun.com/tingyun-app
