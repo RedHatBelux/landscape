@@ -11109,6 +11109,11 @@ landscape:
                   type: fuzzing
                   url: https://github.com/fluent/fluent-bit/blob/master/doc-reports/cncf-fuzzing-audit.pdf
                   vendor: Ada Logics
+              redhat:
+                supported: false
+                product: Red Hat OpenShift Logging
+                description: Fluentd remains available but is deprecated in Red Hat OpenShift Logging in favor of Vector.
+                color: '#ee0000'
           - item:
             name: Fonio
             homepage_url: https://ingraind.org/
@@ -11323,6 +11328,11 @@ landscape:
                   type: security
                   url: https://github.com/jaegertracing/security-audits/blob/master/SECURITY_AUDIT_2019_05_04.pdf
                   vendor: Cure53
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Service Mesh
+                description: Red Hat OpenShift Service Mesh includes and supports Jaeger for distributed tracing of service-to-service traffic.
+                color: '#ee0000'
           - item:
             name: K8sGPT
             homepage_url: https://www.k8sgpt.ai
@@ -12063,6 +12073,12 @@ landscape:
             repo_url: https://github.com/vectordotdev/vector
             logo: vector.svg
             crunchbase: https://www.crunchbase.com/organization/timber
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Logging
+                description: Vector is the default log collector in Red Hat OpenShift Logging 5.6 and later for managed log forwarding.
+                color: '#ee0000'
           - item:
             name: VictoriaMetrics
             homepage_url: https://victoriametrics.com/
