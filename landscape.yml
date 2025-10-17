@@ -1565,7 +1565,7 @@ landscape:
                 supported: true
                 product: Red Hat build of Keycloak
                 description: Red Hat build of Keycloak provides supported enterprise SSO based on Keycloak for OpenShift and hybrid cloud workloads.
-                color: '#fa2200'
+                color: '#0088ff'
               clomonitor_name: keycloak
           - item:
             name: Keylime
