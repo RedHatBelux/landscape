@@ -8,8 +8,8 @@ RUN git clone --depth=1 https://github.com/RedHatBelux/landscape /src/landscape
 
 # Canonical CNCF settings/guide
 RUN mkdir -p /src/cncf && \
-    curl -L -o /src/cncf/settings.yml https://raw.githubusercontent.com/cncf/landscape2-sites/main/cncf/settings.yml && \
-    curl -L -o /src/cncf/guide.yml    https://raw.githubusercontent.com/cncf/landscape2-sites/main/cncf/guide.yml
+    curl -L -o /src/cncf/settings.yml https://raw.githubusercontent.com/RedHatBelux/landscape2/refs/heads/main/docs/config/settings.yml && \
+    curl -L -o /src/cncf/guide.yml    https://raw.githubusercontent.com/RedHatBelux/landscape2/refs/heads/main/docs/config/guide.yml
 
 # ---------- Stage 1: build the static site ----------
 #FROM ghcr.io/cncf/landscape2:latest AS builder
