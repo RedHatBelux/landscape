@@ -32,13 +32,6 @@
       <use href="#logo-redhat" x="1040" y="0" width="640" height="240"/>
     </g>
 
-    <!-- Title (quirky caps as requested) -->
-    <g transform="translate(0,300)">
-      <text x="0" y="0" font-family="Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif" font-size="56" font-weight="800" fill="#111827">
-        CNCF Landscape Red Hat edition
-      </text>
-    </g>
-
     <!-- Trim frame (set opacity=0 before final export if desired) -->
     <rect x="-16" y="-16" width="1730" height="360" rx="16" fill="none" stroke="#f3f4f6" stroke-width="2" opacity="0"/>
   </g>
