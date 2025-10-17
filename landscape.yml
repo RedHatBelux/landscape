@@ -7262,6 +7262,11 @@ landscape:
               chat_channel: '#devfile'
               clomonitor_name: devfile
               summary_tags: Kubernetes, Application Lifecycle, Developer Environment, Containers
+              redhat:
+                supported: true
+                product: Red Hat OpenShift Dev Spaces
+                description: Dev Spaces consumes Devfile specifications to define and launch supported cloud IDE workspaces on OpenShift.
+                color: '#ee0000'
           - item:
             name: DevSpace
             homepage_url: https://devspace.sh
@@ -19881,6 +19886,12 @@ landscape:
           logo: ./vllm-logo-text-light.svg
           unnamed_organization: true
           homepage_url: https://docs.vllm.ai/en/latest/
+          extra:
+            redhat:
+              supported: true
+              product: Red Hat OpenShift AI
+              description: Available as a supported model-serving runtime in Red Hat OpenShift AI for high-performance LLM inference.
+              color: '#ee0000'
         - item:
           name: llmaz
           description: Easy, advanced inference platform for large language models on Kubernetes.
