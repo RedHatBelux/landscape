@@ -10676,7 +10676,7 @@ landscape:
               accepted: '2023-12-19'
               clomonitor_name: krkn
               redhat:
-                supported: true
+                supported: false
                 product: Red Hat OpenShift
                 description: Used by Red Hat OpenShift SRE and performance teams to harden clusters through chaos validation.
                 color: '#ee0000'
