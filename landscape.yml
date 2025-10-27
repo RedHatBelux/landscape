@@ -8673,7 +8673,7 @@ landscape:
               slack_url: https://kubernetes.slack.com/messages/kube-burner
               clomonitor_name: kube-burner
               redhat:
-                supported: true
+                supported: false
                 product: Red Hat OpenShift
                 description: Maintained by Red Hat to validate OpenShift performance, scalability, and chaos-readiness.
                 color: '#ee0000'
