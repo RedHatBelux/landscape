@@ -20058,6 +20058,12 @@ landscape:
           logo: ./kubeflow.svg
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/pipelines/v1/introduction/
+          extra:
+            redhat:
+              supported: true
+              product: Red Hat OpenShift AI
+              description: Red Hat OpenShift AI provides supported Kubeflow Pipelines for building and operationalizing ML workflows on OpenShift.
+              color: '#ee0000'
         - item:
           name: Mlflow
           repo_url: https://github.com/mlflow/mlflow
@@ -20130,6 +20136,12 @@ landscape:
           logo: ./kubeflow.svg
           unnamed_organization: true
           homepage_url: https://www.kubeflow.org/docs/components/notebooks
+          extra:
+            redhat:
+              supported: true
+              product: Red Hat OpenShift AI
+              description: Red Hat OpenShift AI delivers supported Kubeflow Notebooks for interactive model development on OpenShift.
+              color: '#ee0000'
         - item:
           name: PyTorch
           description: About Tensors and Dynamic neural networks in Python with strong GPU acceleration
