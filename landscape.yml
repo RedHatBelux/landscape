@@ -11222,6 +11222,12 @@ landscape:
             repo_url: https://github.com/grafana/grafana
             logo: grafana.svg
             crunchbase: https://www.crunchbase.com/organization/raintank
+            extra:
+              redhat:
+                supported: true
+                product: Red Hat Advanced Cluster Management
+                description: Red Hat Advanced Cluster Management provides supported Grafana dashboards for multi-cluster observability (deprecated in OpenShift Container Platform).
+                color: '#ee0000'
           - item:
             name: Grafana Loki
             description: >-
@@ -20004,6 +20010,11 @@ landscape:
             linkedin_url: https://www.linkedin.com/company/kserve-project
             dev_stats_url: https://kserve.devstats.cncf.io/
             ai: true
+            redhat:
+              supported: true
+              product: Red Hat OpenShift AI
+              description: Red Hat OpenShift AI provides supported KServe components for model serving on OpenShift.
+              color: '#ee0000'
         - item:
           name: Seldon
           repo_url: https://github.com/SeldonIO/seldon-core
@@ -20106,6 +20117,12 @@ landscape:
           logo: ./jupyter_logo.svg
           unnamed_organization: true
           homepage_url: https://jupyter.org
+          extra:
+            redhat:
+              supported: true
+              product: Red Hat OpenShift AI
+              description: Red Hat OpenShift AI includes supported Jupyter environments for interactive notebooks.
+              color: '#ee0000'
         - item:
           name: Kubeflow Notebooks
           description: Machine Learning Toolkit for Kubernetes
@@ -20119,6 +20136,12 @@ landscape:
           logo: ./pytorch.svg
           unnamed_organization: true
           homepage_url: https://pytorch.org
+          extra:
+            redhat:
+              supported: true
+              product: Red Hat Enterprise Linux AI; Red Hat OpenShift AI
+              description: Red Hat Enterprise Linux AI and Red Hat OpenShift AI deliver supported PyTorch for AI model development and deployment across hybrid environments.
+              color: '#ee0000'
         - item:
           name: TensorFlow
           description: An Open Source Machine Learning Framework for Everyone
